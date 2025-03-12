@@ -21,16 +21,16 @@
         {
           imports = [
             inputs.services-flake.processComposeModules.default
-            (multiService ./hello.nix)
+            (multiService ./mcp-core.nix)
           ];
 
-          services.ollama."ollama1".enable = true;
-          services.hello = {
-            hello1 = {
+          services.mcp-core."mcp-server".enable = true;
+          services.mcp-core = {
+            fileSystem = {
               enable = true;
-              message = "Hello, world!";
+              message = "goodbye, disks!";
             };
-            hello2 = {
+            time = {
               enable = true;
               message = "Hello, Nix!";
             };

@@ -1,10 +1,10 @@
 { config, lib, name, pkgs, ... }:
 {
   options = {
-    package = lib.mkPackageOption pkgs "hello" { };
+    package = lib.mkPackageOption pkgs "python313Packages.mcp" { };
     message = lib.mkOption {
       type = lib.types.str;
-      default = "Hello, world!";
+      default = "All your model context, are belong to us!";
       description = "The message to be displayed";
     };
   };
